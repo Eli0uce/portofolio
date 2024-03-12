@@ -6,6 +6,7 @@
     <title>Elias | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -13,40 +14,65 @@
   </head>
   <body class="bg-gray-800 text-white">
     <header class="bg-gray-900 shadow">
-      <nav class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center">
+      <nav
+        class="flex items-center justify-between flex-wrap bg-gray-900 p-6 fixed w-full z-10 top-0"
+      >
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
           <a href="https://eli0uce.github.io/portofolio/" class="flex">
             <img src="img/logo.png" alt="Logo" width="40" class="mr-2" />
             <h1 class="text-3xl font-bold text-white">Portfolio</h1>
           </a>
-          <div>
-            <a
-              href="https://eli0uce.github.io/portofolio/"
-              class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-              >Accueil</a
-            >
-            <a
-              href="#about"
-              class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-              >À propos</a
-            >
-            <a
-              href="#projects"
-              class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-              >Projets</a
-            >
-            <a
-              href="#networks"
-              class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-              >Réseaux</a
-            >
-          </div>
+        </div>
+
+        <div class="block lg:hidden">
+          <button
+            id="nav-toggle"
+            class="flex items-center px-3 py-2 rounded hover:font-bold"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0"
+          id="nav-content"
+        >
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a
+                href="https://eli0uce.github.io/portofolio/"
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
+                >Accueil</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                href="#about"
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
+                >À propos</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                href="#projects"
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
+                >Projets</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                href="#networks"
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
+                >Réseaux</a
+              >
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
 
     <main>
-      <section id="about" class="py-12 bg-gray-900">
+      <section id="about" class="py-12 bg-gray-900 pt-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="lg:text-center">
             <h2
@@ -103,13 +129,13 @@
             <ul class="md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
               <li>
                 <a href="http://149.28.161.160" target="_blank">
-                  <div class="space-y-4 shadow-lg rounded-md">
+                  <div class="space-y-4 shadow-lg rounded-md card-hover-zoom">
                     <img
                       class="w-full h-48 object-cover rounded-md"
                       src="img/wheeltech.png"
                       alt="WheelTech NC"
                     />
-                    <div class="space-y-2 mx-2">
+                    <div class="space-y-2 mx-2 pb-4">
                       <div class="text-lg leading-6 font-medium space-y-1">
                         <h3>WheelTech NC</h3>
                         <p class="text-indigo-400">Site vitrine</p>
@@ -126,13 +152,13 @@
               </li>
               <li>
                 <a href="https://eli0uce.github.io/gite-pim/" target="_blank">
-                  <div class="space-y-4 shadow-lg rounded-md">
+                  <div class="space-y-4 shadow-lg rounded-md card-hover-zoom">
                     <img
                       class="w-full h-48 object-cover rounded-md"
                       src="img/pim.png"
                       alt="Gite Pim"
                     />
-                    <div class="space-y-2 mx-2">
+                    <div class="space-y-2 mx-2 pb-4">
                       <div class="text-lg leading-6 font-medium space-y-1">
                         <h3>Gîte Pim</h3>
                         <p class="text-indigo-400">Site vitrine</p>
@@ -149,13 +175,13 @@
               </li>
               <li>
                 <a href="universe-dev.html">
-                  <div class="space-y-4 shadow-lg rounded-md">
+                  <div class="space-y-4 shadow-lg rounded-md card-hover-zoom">
                     <img
                       class="w-full h-48 object-cover rounded-md"
                       src="img/universe.png"
                       alt="Gite Pim"
                     />
-                    <div class="space-y-2 mx-2">
+                    <div class="space-y-2 mx-2 pb-4">
                       <div class="text-lg leading-6 font-medium space-y-1">
                         <h3>Universe Dev</h3>
                         <p class="text-indigo-400">Site E-commerce</p>
@@ -172,13 +198,13 @@
               </li>
               <li>
                 <a href="wee-care.html">
-                  <div class="space-y-4 shadow-lg rounded-md">
+                  <div class="space-y-4 shadow-lg rounded-md card-hover-zoom">
                     <img
                       class="w-full h-48 object-cover rounded-md"
                       src="img/wee-care.png"
                       alt="Wee-Care"
                     />
-                    <div class="space-y-2 mx-2">
+                    <div class="space-y-2 mx-2 pb-4">
                       <div class="text-lg leading-6 font-medium space-y-1">
                         <h3>Wee-Care</h3>
                         <p class="text-indigo-400">Site Gestion Quotidienne</p>
@@ -254,5 +280,7 @@
         © Elias DUPIN-GILET - Tous droits réservés.
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

@@ -14,3 +14,38 @@
   width: 80%;
   height: 80%;
 }
+
+.card-hover-zoom {
+  transition: transform 0.5s ease;
+  display: inline-block;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.card-hover-zoom:hover {
+  transform: scale(
+    1.05
+  ); /* Ajustez cette valeur pour contrôler l'intensité du zoom */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optionnel: ajoute un ombrage pour un effet de profondeur */
+}
+
+@media (max-width: 768px) {
+  #menu {
+    display: none;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+}
+
+/* Animation pour l'ouverture du menu */
+#menu.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #000; /* Modifiez cette couleur pour correspondre à votre style */
+}

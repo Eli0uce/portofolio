@@ -14,25 +14,44 @@
   </head>
   <body class="bg-gray-800 text-white">
     <header class="bg-gray-900 shadow">
-      <nav class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center">
+      <nav
+        class="flex items-center justify-between flex-wrap bg-gray-900 p-6 fixed w-full z-10 top-0"
+      >
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
           <a href="https://eli0uce.github.io/portofolio/" class="flex">
             <img src="img/logo.png" alt="Logo" width="40" class="mr-2" />
             <h1 class="text-3xl font-bold text-white">Portfolio</h1>
           </a>
-          <div>
-            <a
-              href="https://eli0uce.github.io/portofolio/"
-              class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
-              >Accueil</a
-            >
-          </div>
+        </div>
+
+        <div class="block lg:hidden">
+          <button
+            id="nav-toggle"
+            class="flex items-center px-3 py-2 rounded hover:font-bold"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div
+          class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block pt-6 lg:pt-0"
+          id="nav-content"
+        >
+          <ul class="list-reset lg:flex justify-end flex-1 items-center">
+            <li class="mr-3">
+              <a
+                href="https://eli0uce.github.io/portofolio/"
+                class="text-gray-300 hover:text-white px-3 py-2 rounded-md"
+                >Accueil</a
+              >
+            </li>
+          </ul>
         </div>
       </nav>
     </header>
 
     <main>
-      <section id="projects" class="py-12 bg-gray-800">
+      <section id="projects" class="py-12 bg-gray-800 pt-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="lg:text-center">
             <h2
@@ -78,5 +97,7 @@
         © Elias DUPIN-GILET - Tous droits réservés.
       </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
