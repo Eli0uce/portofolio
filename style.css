@@ -1,9 +1,8 @@
 body {
-  font-family: "Epilogue", sans-serif;
+  font-family: Epilogue, sans-serif;
 }
-
-@keyframes fadeIn {
-  from {
+@keyframes a {
+  0% {
     opacity: 0;
     transform: translateY(20px);
   }
@@ -12,138 +11,117 @@ body {
     transform: translateY(0);
   }
 }
-
 .fade-in {
-  animation: fadeIn 2s ease-out;
+  animation: a 2s ease-out;
 }
-
 .btn1 {
-  height: 3.5rem;
-  padding: 0 2rem;
+  background-color: #fff;
   border: 0.1rem solid #000;
   border-radius: 3.12rem;
   box-shadow: 0 0.4rem 0 0 #000;
-  background-color: #fff;
   color: #000;
-  font-size: 1.2rem;
   cursor: pointer;
+  font-size: 1.2rem;
+  height: 3.5rem;
+  padding: 0 2rem;
   transition: all 0.3s;
   &:hover {
-    transform: translateY(0.3rem);
     box-shadow: 0 0.2rem 0 0 #000;
+    transform: translateY(0.3rem);
   }
 }
-
 .embed-container {
-  position: relative;
-  padding-bottom: 56.25%;
   height: 0;
-  overflow: hidden;
   max-width: 100%;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
 }
-
+.embed-container embed,
 .embed-container iframe,
-.embed-container object,
-.embed-container embed {
+.embed-container object {
+  height: 80%;
+  left: 10%;
   position: absolute;
   top: 0;
-  left: 10%;
   width: 80%;
-  height: 80%;
 }
-
 .card-hover-zoom {
-  transition: transform 0.5s ease;
   margin: 0 auto;
   overflow: hidden;
+  transition: transform 0.5s ease;
 }
-
 .card-hover-zoom:hover {
-  transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
-
-#menu {
-  display: none;
-}
-
+#menu,
 #menu-btn {
   display: none;
 }
-
 @media (max-width: 768px) {
   #menu.active {
+    background-color: #000;
     display: flex;
     flex-direction: column;
+    left: 0;
     position: absolute;
     top: 100%;
-    left: 0;
     width: 100%;
-    background-color: #000;
   }
-
   #menu-btn {
     display: block;
   }
 }
-
 .text-hidden {
   opacity: 0;
-  transition: opacity 5s ease-out; /* Ajustez la durée selon vos préférences */
+  transition: opacity 5s ease-out;
 }
-
 .text-visible {
   opacity: 1;
 }
-
 .text {
-  position: absolute;
-  right: 50%;
-  transform: translate(50%, -50%);
-  text-transform: uppercase;
+  color: #f5f5f5;
   font-family: verdana;
   font-size: 3em;
   font-weight: 700;
-  color: #f5f5f5;
+  position: absolute;
+  right: 50%;
   text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
     1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
     1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
     1px 10px 1px #919191;
+  text-transform: uppercase;
+  transform: translate(50%, -50%);
 }
-
 @media (max-width: 1024px) {
   .text {
     font-size: 2.3em;
   }
 }
-
 @media (max-width: 768px) {
   .text {
     font-size: 2em;
   }
 }
-
 @media (max-width: 400px) {
   .text {
     display: none;
   }
 }
-
 #particles-js {
-  position: absolute;
-  width: 100%;
   height: 100%;
-  top: 0;
   left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
   z-index: 1;
 }
-
 #about {
   position: relative;
   z-index: 2;
 }
-
-@keyframes rgb-color {
+@keyframes b {
   0% {
     color: #318bff;
   }
@@ -153,65 +131,55 @@ body {
   66% {
     color: #818cf8;
   }
-  100% {
+  to {
     color: #ba35d1;
   }
 }
-
 .animated-rgb-color {
-  animation: rgb-color 4s linear infinite;
+  animation: b 4s linear infinite;
 }
-
 .container {
   overflow: hidden;
 }
-
 .container .slider {
-  animation: slidein 30s linear infinite;
+  animation: c 30s linear infinite;
   white-space: nowrap;
 }
-
 .container .slider .logos {
-  width: 100%;
   display: inline-block;
-  margin: 0px 0;
+  margin: 0;
+  width: 100%;
 }
-
 .container .slider .logos .fab {
-  width: calc(100% / 10);
-  animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+  animation: d 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+  width: 10%;
 }
-
 .container .slider-md {
-  animation: slidein 30s linear infinite;
+  animation: c 30s linear infinite;
   white-space: nowrap;
 }
-
 .container .slider-md .logos {
-  width: 100%;
   display: inline-block;
-  margin: 0px 0;
+  margin: 0;
+  width: 100%;
 }
-
 .container .slider-md .logos .fab {
-  width: calc(100% / 5);
-  animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+  animation: d 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+  width: 20%;
 }
-
-@keyframes slidein {
-  from {
-    transform: translate3d(0, 0, 0);
+@keyframes c {
+  0% {
+    transform: translateZ(0);
   }
   to {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
-@keyframes fade-in {
+@keyframes d {
   0% {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
