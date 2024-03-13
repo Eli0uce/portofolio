@@ -112,3 +112,22 @@
   position: relative;
   z-index: 2;
 }
+
+@keyframes rgb-color {
+  0% {
+    color: #318bff;
+  }
+  33% {
+    color: #76e7dc;
+  }
+  66% {
+    color: #818cf8;
+  }
+  100% {
+    color: #ba35d1;
+  }
+}
+
+.animated-rgb-color {
+  animation: rgb-color 4s linear infinite;
+}
