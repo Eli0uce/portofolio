@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       move: {
         enable: true,
-        speed: 6,
+        speed: 3,
         direction: "none",
         random: false,
         straight: false,
@@ -77,11 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
       detect_on: "canvas",
       events: {
         onhover: {
-          enable: true,
+          enable: false,
           mode: "repulse",
         },
         onclick: {
-          enable: true,
+          enable: false,
           mode: "push",
         },
         resize: true,
