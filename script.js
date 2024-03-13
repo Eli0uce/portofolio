@@ -115,3 +115,24 @@ document.addEventListener("DOMContentLoaded", function () {
     retina_detect: true,
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("text-visible");
+          observer.unobserve(entry.target); // Arrêtez d'observer après la première intersection
+        }
+      });
+    },
+    {
+      threshold: 0.1, // Déclenche l'observer quand 10% de l'élément est visible
+    }
+  );
+
+  const textElement = document.querySelector("#text .text");
+  if (textElement) {
+    observer.observe(textElement);
+  }
+});

@@ -66,6 +66,15 @@
   }
 }
 
+.text-hidden {
+  opacity: 0;
+  transition: opacity 5s ease-out; /* Ajustez la durée selon vos préférences */
+}
+
+.text-visible {
+  opacity: 1;
+}
+
 .text {
   position: absolute;
   right: 50%;
