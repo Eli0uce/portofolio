@@ -1,3 +1,7 @@
+body {
+  font-family: "Epilogue", sans-serif;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -11,6 +15,23 @@
 
 .fade-in {
   animation: fadeIn 2s ease-out;
+}
+
+.btn1 {
+  height: 3.5rem;
+  padding: 0 2rem;
+  border: 0.1rem solid #000;
+  border-radius: 3.12rem;
+  box-shadow: 0 0.4rem 0 0 #000;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(0.3rem);
+    box-shadow: 0 0.2rem 0 0 #000;
+  }
 }
 
 .embed-container {
@@ -139,4 +160,58 @@
 
 .animated-rgb-color {
   animation: rgb-color 4s linear infinite;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.container .slider {
+  animation: slidein 30s linear infinite;
+  white-space: nowrap;
+}
+
+.container .slider .logos {
+  width: 100%;
+  display: inline-block;
+  margin: 0px 0;
+}
+
+.container .slider .logos .fab {
+  width: calc(100% / 10);
+  animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+
+.container .slider-md {
+  animation: slidein 30s linear infinite;
+  white-space: nowrap;
+}
+
+.container .slider-md .logos {
+  width: 100%;
+  display: inline-block;
+  margin: 0px 0;
+}
+
+.container .slider-md .logos .fab {
+  width: calc(100% / 5);
+  animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
