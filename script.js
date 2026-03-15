@@ -1,1 +1,61 @@
-document.getElementById("nav-toggle").onclick=function(){document.getElementById("nav-content").classList.toggle("hidden")},new kursor({type:1,color:"#fff",removeDefaultCursor:!0}),document.addEventListener("DOMContentLoaded",function(){particlesJS("particles-js",{particles:{number:{value:80,density:{enable:!0,value_area:800}},color:{value:"#ffffff"},shape:{type:"circle",stroke:{width:0,color:"#000000"},polygon:{nb_sides:5}},opacity:{value:.5,random:!1,anim:{enable:!1,speed:1,opacity_min:.1,sync:!1}},size:{value:3,random:!0,anim:{enable:!1,speed:40,size_min:.1,sync:!1}},line_linked:{enable:!0,distance:150,color:"#ffffff",opacity:.4,width:1},move:{enable:!0,speed:3,direction:"none",random:!1,straight:!1,out_mode:"out",bounce:!1,attract:{enable:!1,rotateX:600,rotateY:1200}}},interactivity:{detect_on:"canvas",events:{onhover:{enable:!1,mode:"repulse"},onclick:{enable:!1,mode:"push"},resize:!0},modes:{grab:{distance:400,line_linked:{opacity:1}},bubble:{distance:400,size:40,duration:2,opacity:8,speed:3},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}}},retina_detect:!0})}),document.addEventListener("DOMContentLoaded",function(){const t=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(e.target.classList.add("text-visible"),t.unobserve(e.target))})},{threshold:.1});var e=document.querySelector("#text .text");e&&t.observe(e)});
+document.addEventListener("DOMContentLoaded", function () {
+  var navToggle = document.getElementById("nav-toggle");
+  var navContent = document.getElementById("nav-content");
+  var siteHeader = document.getElementById("site-header");
+  var yearNode = document.getElementById("year");
+  var revealTargets = document.querySelectorAll(".reveal");
+
+  if (yearNode) {
+	yearNode.textContent = String(new Date().getFullYear());
+  }
+
+  if (navToggle && navContent) {
+	navToggle.addEventListener("click", function () {
+	  var isOpen = navContent.classList.toggle("is-open");
+	  navToggle.setAttribute("aria-expanded", String(isOpen));
+	});
+
+	navContent.querySelectorAll("a").forEach(function (link) {
+	  link.addEventListener("click", function () {
+		navContent.classList.remove("is-open");
+		navToggle.setAttribute("aria-expanded", "false");
+	  });
+	});
+  }
+
+  var updateHeaderState = function () {
+	if (!siteHeader) {
+	  return;
+	}
+	if (window.scrollY > 18) {
+	  siteHeader.classList.add("is-scrolled");
+	} else {
+	  siteHeader.classList.remove("is-scrolled");
+	}
+  };
+
+  updateHeaderState();
+  window.addEventListener("scroll", updateHeaderState, { passive: true });
+
+  if ("IntersectionObserver" in window) {
+	var observer = new IntersectionObserver(
+	  function (entries) {
+		entries.forEach(function (entry) {
+		  if (entry.isIntersecting) {
+			entry.target.classList.add("in-view");
+			observer.unobserve(entry.target);
+		  }
+		});
+	  },
+	  { threshold: 0.14 }
+	);
+
+	revealTargets.forEach(function (node) {
+	  observer.observe(node);
+	});
+  } else {
+	revealTargets.forEach(function (node) {
+	  node.classList.add("in-view");
+	});
+  }
+});
