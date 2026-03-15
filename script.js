@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", function () {
   var yearNode = document.getElementById("year");
   var revealTargets = document.querySelectorAll(".reveal");
   var prefersReducedMotion =
-  window.matchMedia &&
-  window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+	window.matchMedia &&
+	window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   if (yearNode) {
 	yearNode.textContent = String(new Date().getFullYear());
@@ -18,12 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	document.querySelectorAll(".glass-card").forEach(function (card) {
+	  var rafId = null;
+
 	  card.addEventListener("mousemove", function (event) {
-		var rect = card.getBoundingClientRect();
-		var x = ((event.clientX - rect.left) / rect.width) * 100;
-		var y = ((event.clientY - rect.top) / rect.height) * 100;
-		card.style.setProperty("--pointer-x", x.toFixed(2) + "%");
-		card.style.setProperty("--pointer-y", y.toFixed(2) + "%");
+		if (rafId) {
+		  return;
+		}
+		rafId = window.requestAnimationFrame(function () {
+		  var rect = card.getBoundingClientRect();
+		  var x = ((event.clientX - rect.left) / rect.width) * 100;
+		  var y = ((event.clientY - rect.top) / rect.height) * 100;
+		  card.style.setProperty("--pointer-x", x.toFixed(2) + "%");
+		  card.style.setProperty("--pointer-y", y.toFixed(2) + "%");
+		  rafId = null;
+		});
 	  });
 
 	  card.addEventListener("mouseenter", function () {
@@ -38,18 +46,39 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
   }
 
-
   if (navToggle && navContent) {
+	var closeMenu = function () {
+	  navContent.classList.remove("is-open");
+	  navToggle.setAttribute("aria-expanded", "false");
+	};
+
 	navToggle.addEventListener("click", function () {
 	  var isOpen = navContent.classList.toggle("is-open");
 	  navToggle.setAttribute("aria-expanded", String(isOpen));
 	});
 
 	navContent.querySelectorAll("a").forEach(function (link) {
-	  link.addEventListener("click", function () {
-		navContent.classList.remove("is-open");
-		navToggle.setAttribute("aria-expanded", "false");
-	  });
+	  link.addEventListener("click", closeMenu);
+	});
+
+	document.addEventListener("click", function (event) {
+	  var clickedOutsideMenu =
+		!navContent.contains(event.target) && !navToggle.contains(event.target);
+	  if (clickedOutsideMenu) {
+		closeMenu();
+	  }
+	});
+
+	document.addEventListener("keydown", function (event) {
+	  if (event.key === "Escape") {
+		closeMenu();
+	  }
+	});
+
+	window.addEventListener("resize", function () {
+	  if (window.innerWidth > 900) {
+		closeMenu();
+	  }
 	});
   }
 

@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
     <div class="background-orb orb-a"></div>
     <div class="background-orb orb-b"></div>
     <div class="background-orb orb-c"></div>
@@ -69,7 +70,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero shell reveal">
         <p class="eyebrow">Developpeur web</p>
         <h1>
@@ -87,7 +88,7 @@
         </div>
         <div class="stats-grid">
           <article class="glass-card stat-card">
-            <strong>4+</strong>
+            <strong>5+</strong>
             <span>Projets presents</span>
           </article>
           <article class="glass-card stat-card">
@@ -127,21 +128,43 @@
         </div>
         <div class="project-grid">
           <article class="glass-card project-card">
-            <img src="img/wheeltech.webp" alt="Apercu WheelTech" />
+            <img src="img/wheeltech.webp" alt="Apercu WheelTech" loading="lazy" />
             <div>
               <h3>WheelTech NC</h3>
               <p>
                 Site vitrine pour garage moto/scooter/quad avec une base solide
                 pour futures evolutions backend.
               </p>
-              <a href="https://wheeltech.nc" target="_blank" rel="noreferrer"
+              <a
+                href="https://wheeltech.nc"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ouvrir WheelTech NC dans un nouvel onglet"
                 >Visiter le site</a
               >
             </div>
           </article>
 
           <article class="glass-card project-card">
-            <img src="img/pim.webp" alt="Apercu Gite Pim" />
+            <img src="img/logo.webp" alt="Apercu BombParty" loading="lazy" />
+            <div>
+              <h3>BombParty</h3>
+              <p>
+                Jeu web dynamique de rapidite lexicale, avec une experience fun,
+                fluide et orientee interaction en temps reel.
+              </p>
+              <a
+                href="https://eli0uce.github.io/BombParty/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Ouvrir BombParty dans un nouvel onglet"
+                >Visiter le site</a
+              >
+            </div>
+          </article>
+
+          <article class="glass-card project-card">
+            <img src="img/pim.webp" alt="Apercu Gite Pim" loading="lazy" />
             <div>
               <h3>Gite Pim</h3>
               <p>
@@ -158,7 +181,7 @@
           </article>
 
           <article class="glass-card project-card">
-            <img src="img/universe.webp" alt="Apercu Universe Dev" />
+            <img src="img/universe.webp" alt="Apercu Universe Dev" loading="lazy" />
             <div>
               <h3>Universe Dev</h3>
               <p>
@@ -170,7 +193,7 @@
           </article>
 
           <article class="glass-card project-card">
-            <img src="img/wee-care.webp" alt="Apercu Wee-Care" />
+            <img src="img/wee-care.webp" alt="Apercu Wee-Care" loading="lazy" />
             <div>
               <h3>Wee-Care</h3>
               <p>
