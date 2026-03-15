@@ -457,6 +457,10 @@ h1 span {
   padding: 1rem;
 }
 
+.project-card-modern .project-tags {
+  margin-top: 0.7rem;
+}
+
 .project-cta {
   display: inline-flex;
   margin-top: 0.8rem;
