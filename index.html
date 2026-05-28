@@ -1,274 +1,277 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-MCCJK0MJFB"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCCJK0MJFB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
       gtag("config", "G-MCCJK0MJFB");
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfolio d'Elias DUPIN-GILET, développeur web passionné par les interfaces modernes et performantes."
-    />
-    <title>Elias | Portfolio</title>
+    <meta name="theme-color" content="#0b0b14" />
+    <meta name="description" content="Portfolio d'Elias DUPIN-GILET — développeur web créatif spécialisé dans les interfaces modernes, performantes et accessibles." />
+    <meta property="og:title" content="Elias DUPIN-GILET — Développeur Web" />
+    <meta property="og:description" content="Interfaces modernes, code propre, expériences fluides." />
+    <meta property="og:type" content="website" />
+    <title>Elias DUPIN-GILET — Développeur Web</title>
+
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Aller au contenu principal</a>
-    <div class="background-orb orb-a"></div>
-    <div class="background-orb orb-b"></div>
-    <div class="background-orb orb-c"></div>
+    <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+    <div class="bg-mesh" aria-hidden="true">
+      <div class="mesh mesh-1"></div>
+      <div class="mesh mesh-2"></div>
+      <div class="mesh mesh-3"></div>
+      <div class="grain"></div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
+
 
     <header class="site-header" id="site-header">
       <nav class="nav shell" aria-label="Navigation principale">
-        <a class="brand" href="index.html" aria-label="Accueil du portfolio">
-          <img src="img/logo.webp" alt="Logo Elias" />
-          <span>Portfolio</span>
+        <a class="brand" href="#top" aria-label="Retour en haut">
+          <img src="img/logo.webp" alt="" />
+          <span>elias<em>.</em>dev</span>
         </a>
 
-        <button
-          id="nav-toggle"
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="nav-content"
-          aria-label="Ouvrir le menu"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
+        <div class="nav-links" id="nav-content">
+          <a href="#about" data-nav>À propos</a>
+          <a href="#projects" data-nav>Projets</a>
+          <a href="#skills" data-nav>Stack</a>
+          <a href="#contact" data-nav>Contact</a>
+        </div>
 
-        <div class="nav-content" id="nav-content">
-          <a href="#about">A propos</a>
-          <a href="#projects">Projets</a>
-          <a href="#skills">Competences</a>
-          <a href="#contact">Contact</a>
+        <div class="nav-actions">
+          <a class="pill" href="#contact">
+            <i class="status-dot" aria-hidden="true"></i>
+            <span>Disponible</span>
+          </a>
+          <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-content" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </nav>
     </header>
 
-    <main id="main-content">
-      <section class="hero shell reveal">
-        <p class="eyebrow">Developpeur web</p>
-        <h1>
-          Elias DUPIN-GILET<br />
-          <span>UI moderne, code propre, experiences fluides.</span>
+    <main id="main" tabindex="-1">
+      <section class="hero shell" id="top">
+        <div class="hero-tag reveal">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Portfolio · 2026</span>
+        </div>
+
+        <h1 class="hero-title reveal">
+          <span class="line">Je conçois des</span>
+          <span class="line"><em class="grad">interfaces</em> qui</span>
+          <span class="line">racontent une histoire.</span>
         </h1>
-        <p class="hero-text">
-          Je conçois des interfaces dark, elegantes et performantes, avec un
-          fort accent sur l'UX, les animations subtiles et la qualite de
-          finition.
+
+        <p class="hero-sub reveal">
+          Salut, moi c'est <strong>Elias DUPIN-GILET</strong> — développeur web basé en Nouvelle-Calédonie.
+          Je crée des produits digitaux soignés, performants et centrés utilisateur.
         </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Voir mes projets</a>
-          <a class="btn btn-glass" href="#contact">Me contacter</a>
+
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="#projects">
+            <span>Découvrir mes projets</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a class="btn btn-ghost" href="#contact">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Travaillons ensemble</span>
+          </a>
         </div>
-        <div class="stats-grid">
-          <article class="glass-card stat-card">
-            <strong>4+</strong>
-            <span>Projets presents</span>
+
+        <div class="hero-meta reveal">
+          <div><strong>4+</strong><span>projets en ligne</span></div>
+          <div class="sep"></div>
+          <div><strong>2 ans</strong><span>d'expérience</span></div>
+          <div class="sep"></div>
+          <div><strong>UX</strong><span>first toujours</span></div>
+        </div>
+
+        <a class="scroll-hint" href="#about" aria-label="Faire défiler"><span></span></a>
+      </section>
+
+      <section id="about" class="section shell reveal">
+        <div class="section-head">
+          <p class="eyebrow"><span class="dot"></span> À propos</p>
+          <h2 class="section-title">Un développeur, deux obsessions&nbsp;: <em class="grad">finition</em> &amp; <em class="grad">performance</em>.</h2>
+        </div>
+
+        <div class="about-grid">
+          <article class="card card-lg">
+            <p>Depuis ma première ligne de code, j'aime transformer des idées brutes en produits digitaux utiles, accessibles et agréables. Mon terrain de jeu : le front-end moderne, avec une vraie attention aux micro-interactions et à l'identité visuelle.</p>
+            <p>Sites vitrines, applications web riches, e-commerce sur mesure — toujours avec un code propre, des animations subtiles et une UX qui reste lisible.</p>
           </article>
-          <article class="glass-card stat-card">
-            <strong>1.5 an</strong>
-            <span>Experience intensive</span>
+
+          <article class="card card-stat">
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <h3>Rapide</h3>
+            <p>Pages optimisées, images modernes, zéro friction.</p>
           </article>
-          <article class="glass-card stat-card">
-            <strong>UX first</strong>
-            <span>Approche orientee utilisateur</span>
+
+          <article class="card card-stat">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <h3>Soigné</h3>
+            <p>Attention obsessionnelle aux détails visuels.</p>
+          </article>
+
+          <article class="card card-stat">
+            <i class="fa-solid fa-universal-access"></i>
+            <h3>Accessible</h3>
+            <p>Pensé pour tout le monde, sur tous les écrans.</p>
           </article>
         </div>
       </section>
 
-      <section id="about" class="shell section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">A propos</p>
-          <h2>Un profil polyvalent et oriente resultats</h2>
+      <section id="projects" class="section shell reveal">
+        <div class="section-head">
+          <p class="eyebrow"><span class="dot"></span> Projets</p>
+          <h2 class="section-title">Sélection de <em class="grad">réalisations</em> récentes.</h2>
+          <p class="section-sub">Du site vitrine à l'application interactive, en passant par l'e-commerce sur mesure.</p>
         </div>
-        <div class="glass-card prose">
-          <p>
-            J'aime transformer des idees en produits digitaux utiles et
-            impactants. Mon objectif: livrer des interfaces intuitives,
-            esthetiques et rapides a utiliser.
-          </p>
-          <p>
-            Je travaille aussi bien sur des sites vitrines que sur des apps web
-            plus riches, avec une attention particuliere aux details visuels,
-            aux micro-interactions et a la lisibilite globale du produit.
-          </p>
-        </div>
-      </section>
 
-      <section id="projects" class="shell section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Projets</p>
-          <h2>Selection de realisations</h2>
-          <p class="projects-intro">
-            Une selection de projets concrets, du site vitrine a l'application
-            web interactive, avec un focus sur la qualite d'execution et l'experience utilisateur.
-          </p>
-        </div>
-        <div class="projects-showcase">
-          <article class="glass-card project-featured-card">
-            <div class="project-featured-media-wrap">
-              <img src="img/bombparty.webp" alt="Apercu BombParty" loading="lazy" />
-              <span class="project-badge">Nouveau</span>
+        <div class="projects-bento">
+          <a href="https://eli0uce.github.io/BombParty/" target="_blank" rel="noreferrer" class="project project-feature">
+            <div class="project-media">
+              <img src="img/bombparty.webp" alt="Aperçu BombParty" loading="lazy" />
+              <span class="badge">★ Mis en avant</span>
             </div>
-            <div class="project-featured-content">
-              <p class="project-kicker">Projet mis en avant</p>
+            <div class="project-body">
+              <p class="project-kicker">Jeu web · JavaScript</p>
               <h3>BombParty</h3>
-              <p>
-                Jeu web dynamique de rapidite lexicale avec une experience fun,
-                fluide et orientee interaction en temps reel.
-              </p>
-              <div class="project-tags" aria-label="Technologies BombParty">
-                <span>JavaScript</span>
-                <span>UI dynamique</span>
-                <span>Gameplay</span>
-              </div>
-              <a
-                class="project-cta"
-                href="https://eli0uce.github.io/BombParty/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Ouvrir BombParty dans un nouvel onglet"
-                >Jouer maintenant</a
-              >
+              <p>Jeu lexical multijoueur dynamique. Interface ludique, animations à la milliseconde, gameplay temps réel.</p>
+              <ul class="tags"><li>JavaScript</li><li>UI dynamique</li><li>Gameplay</li></ul>
+              <span class="project-link">Jouer maintenant <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
             </div>
-          </article>
+          </a>
 
-          <div class="project-grid-modern">
-            <article class="glass-card project-card-modern">
-              <img src="img/wheeltech.webp" alt="Apercu WheelTech" loading="lazy" />
-              <div>
-                <p class="project-kicker">Site vitrine</p>
-                <h3>WheelTech NC</h3>
-                <p>
-                  Site vitrine pour garage moto/scooter/quad avec une base
-                  solide pour futures evolutions backend.
-                </p>
-                <a
-                  class="project-cta"
-                  href="https://wheeltech.nc"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Ouvrir WheelTech NC dans un nouvel onglet"
-                  >Visiter le site</a
-                >
-              </div>
-            </article>
+          <a href="https://wheeltech.nc" target="_blank" rel="noreferrer" class="project">
+            <div class="project-media">
+              <img src="img/wheeltech.webp" alt="Aperçu WheelTech NC" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Site vitrine</p>
+              <h3>WheelTech NC</h3>
+              <p>Garage moto/scooter/quad — base solide pour évolutions futures.</p>
+              <span class="project-link">Visiter <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+          </a>
 
-            <article class="glass-card project-card-modern">
-              <img src="img/universe.webp" alt="Apercu Universe Dev" loading="lazy" />
-              <div>
-                <p class="project-kicker">Etude de cas</p>
-                <h3>Universe Dev</h3>
-                <p>
-                  Plateforme e-commerce sur mesure orientee scripts FiveM/RedM
-                  avec espace utilisateur et stack moderne.
-                </p>
-                <a class="project-cta" href="universe-dev.html">Etude de cas</a>
-              </div>
-            </article>
+          <a href="universe-dev.html" class="project">
+            <div class="project-media">
+              <img src="img/universe.webp" alt="Aperçu Universe Dev" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">Étude de cas</p>
+              <h3>Universe Dev</h3>
+              <p>Plateforme e-commerce sur mesure pour scripts FiveM / RedM.</p>
+              <span class="project-link">Lire l'étude <i class="fa-solid fa-arrow-right"></i></span>
+            </div>
+          </a>
 
-            <article class="glass-card project-card-modern">
-              <img src="img/cabascagou.webp" alt="Apercu Cabas Cagou" loading="lazy" />
-              <div>
-                <p class="project-kicker">E-commerce · Laravel</p>
-                <h3>Cabas Cagou</h3>
-                <p>
-                  Boutique e-commerce de maroquinerie artisanale en cuir
-                  vegetal eco-responsable. Catalogue, panier, auth et SEO
-                  avance pour une Maitre Artisan caledonnienne.
-                </p>
-                <div class="project-tags" aria-label="Technologies Cabas Cagou">
-                  <span>Laravel</span>
-                  <span>Alpine.js</span>
-                  <span>Tailwind</span>
-                  <span>SEO</span>
-                </div>
-                <a
-                  class="project-cta"
-                  href="https://cabascagou.com"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Ouvrir Cabas Cagou dans un nouvel onglet"
-                  >Visiter le site</a
-                >
-              </div>
-            </article>
+          <a href="https://cabascagou.com" target="_blank" rel="noreferrer" class="project project-wide">
+            <div class="project-media">
+              <img src="img/cabascagou.webp" alt="Aperçu Cabas Cagou" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <p class="project-kicker">E-commerce · Laravel</p>
+              <h3>Cabas Cagou</h3>
+              <p>Boutique e-commerce de maroquinerie artisanale en cuir végétal éco-responsable. Catalogue, panier, authentification, SEO avancé pour une Maître Artisan calédonienne.</p>
+              <ul class="tags"><li>Laravel</li><li>Alpine.js</li><li>Tailwind</li><li>SEO</li></ul>
+              <span class="project-link">Visiter le site <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section id="skills" class="section shell reveal">
+        <div class="section-head">
+          <p class="eyebrow"><span class="dot"></span> Stack</p>
+          <h2 class="section-title">Les outils du <em class="grad">métier</em>.</h2>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-brands fa-php"></i> PHP</span>
+            <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+            <span><i class="fa-brands fa-react"></i> React</span>
+            <span><i class="fa-solid fa-wind"></i> Tailwind</span>
+            <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+            <span><i class="fa-brands fa-github"></i> GitHub</span>
+            <span><i class="fa-brands fa-wordpress"></i> WordPress</span>
+            <span><i class="fa-brands fa-html5"></i> HTML5</span>
+            <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+            <span><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span><i class="fa-brands fa-php"></i> PHP</span>
+            <span><i class="fa-brands fa-laravel"></i> Laravel</span>
+            <span><i class="fa-brands fa-react"></i> React</span>
+            <span><i class="fa-solid fa-wind"></i> Tailwind</span>
+            <span><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+            <span><i class="fa-brands fa-github"></i> GitHub</span>
+            <span><i class="fa-brands fa-wordpress"></i> WordPress</span>
           </div>
         </div>
       </section>
 
-      <section id="skills" class="shell section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Competences</p>
-          <h2>Stack et technologies</h2>
-        </div>
-        <div class="glass-card skills-wrap">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript</span>
-          <span>PHP</span>
-          <span>Laravel</span>
-          <span>React</span>
-          <span>Tailwind</span>
-          <span>Bootstrap</span>
-          <span>GitHub</span>
-          <span>WordPress</span>
-        </div>
-      </section>
+      <section id="contact" class="section shell reveal">
+        <div class="contact-card">
+          <div class="contact-left">
+            <p class="eyebrow"><span class="dot"></span> Contact</p>
+            <h2 class="section-title">Une idée en tête&nbsp;? <em class="grad">Parlons-en.</em></h2>
+            <p class="contact-lead">Réponse rapide, échange transparent, devis honnête.</p>
 
-      <section id="contact" class="shell section reveal">
-        <div class="section-heading">
-          <p class="eyebrow">Contact</p>
-          <h2>Discutons de votre prochain projet</h2>
-        </div>
-        <div class="glass-card contact-panel">
-          <a href="mailto:elias.dg@outlook.fr"
-            ><i class="fa-solid fa-envelope"></i> elias.dg@outlook.fr</a
-          >
-          <a
-            href="https://www.linkedin.com/in/elias-dupin-gilet-35b9952b9/"
-            target="_blank"
-            rel="noreferrer"
-            ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
-          >
-          <a href="https://github.com/Eli0uce" target="_blank" rel="noreferrer"
-            ><i class="fa-brands fa-github"></i> GitHub</a
-          >
-          <a href="tel:+687768249"
-            ><i class="fa-solid fa-phone"></i> 76 82 49</a
-          >
+            <a class="btn btn-primary btn-lg" href="mailto:elias.dg@outlook.fr">
+              <i class="fa-solid fa-envelope"></i>
+              <span>elias.dg@outlook.fr</span>
+            </a>
+          </div>
+
+          <ul class="contact-links">
+            <li>
+              <a href="https://www.linkedin.com/in/elias-dupin-gilet-35b9952b9/" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+                <i class="fa-solid fa-arrow-up-right-from-square arr"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Eli0uce" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+                <i class="fa-solid fa-arrow-up-right-from-square arr"></i>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+687768249">
+                <i class="fa-solid fa-phone"></i>
+                <span>+687 76 82 49</span>
+                <i class="fa-solid fa-arrow-up-right-from-square arr"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
 
     <footer class="site-footer shell">
-      <p>© <span id="year"></span> Elias DUPIN-GILET - Tous droits reserves.</p>
+      <p>© <span id="year"></span> Elias DUPIN-GILET — Conçu &amp; codé avec <i class="fa-solid fa-heart" style="color:#ff5577"></i> à Nouméa.</p>
+      <a href="#top" class="to-top" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></a>
     </footer>
 
     <script src="script.js"></script>

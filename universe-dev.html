@@ -1,110 +1,177 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-MCCJK0MJFB"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCCJK0MJFB"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
+      function gtag() { dataLayer.push(arguments); }
       gtag("js", new Date());
-
       gtag("config", "G-MCCJK0MJFB");
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Etude de cas Universe Dev: e-commerce de scripts FiveM/RedM, design moderne et experience utilisateur optimisee."
-    />
-    <title>Elias | Portfolio</title>
+    <meta name="theme-color" content="#0b0b14" />
+    <meta name="description" content="Étude de cas Universe Dev — plateforme e-commerce sur mesure pour scripts FiveM/RedM, design immersif et UX optimisée." />
+    <title>Universe Dev — Étude de cas · Elias DUPIN-GILET</title>
+
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="background-orb orb-a"></div>
-    <div class="background-orb orb-b"></div>
-    <div class="background-orb orb-c"></div>
+    <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+    <div class="bg-mesh" aria-hidden="true">
+      <div class="mesh mesh-1"></div>
+      <div class="mesh mesh-2"></div>
+      <div class="mesh mesh-3"></div>
+      <div class="grain"></div>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"><span id="scroll-bar"></span></div>
 
     <header class="site-header" id="site-header">
       <nav class="nav shell" aria-label="Navigation principale">
-        <a class="brand" href="index.html" aria-label="Retour accueil">
-          <img src="img/logo.webp" alt="Logo Elias" />
-          <span>Portfolio</span>
+        <a class="brand" href="index.html" aria-label="Retour à l'accueil">
+          <img src="img/logo.webp" alt="" />
+          <span>elias<em>.</em>dev</span>
         </a>
 
-        <button
-          id="nav-toggle"
-          class="nav-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="nav-content"
-          aria-label="Ouvrir le menu"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
+        <div class="nav-links" id="nav-content">
+          <a href="index.html" data-nav>Accueil</a>
+          <a href="index.html#projects" data-nav>Projets</a>
+          <a href="index.html#contact" data-nav>Contact</a>
+        </div>
 
-        <div class="nav-content" id="nav-content">
-          <a href="index.html">Accueil</a>
-          <a href="index.html#projects">Projets</a>
-          <a href="index.html#contact">Contact</a>
+        <div class="nav-actions">
+          <a class="pill" href="index.html#contact">
+            <i class="status-dot" aria-hidden="true"></i>
+            <span>Disponible</span>
+          </a>
+          <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-content" aria-label="Ouvrir le menu">
+            <span></span><span></span><span></span>
+          </button>
         </div>
       </nav>
     </header>
 
-    <main class="shell">
-      <section class="hero-project reveal">
-        <p class="eyebrow">Etude de cas</p>
-        <h1>Universe Dev</h1>
-        <p class="hero-text">
-          Plateforme de vente et de partage de scripts FiveM/RedM, pensee pour
-          une experience utilisateur fluide et une presentation claire des
-          produits.
+    <main id="main" tabindex="-1">
+      <section class="case-hero shell">
+        <a href="index.html#projects" class="back-link reveal">
+          <i class="fa-solid fa-arrow-left"></i> Retour aux projets
+        </a>
+
+        <p class="eyebrow reveal"><span class="dot"></span> Étude de cas · 2024</p>
+        <h1 class="case-title reveal">
+          <em class="grad">Universe Dev</em><br />
+          E-commerce de niche pour la communauté FiveM / RedM.
+        </h1>
+
+        <p class="case-lead reveal">
+          Une plateforme sur mesure pensée pour les créateurs et joueurs de
+          serveurs roleplay : catalogue de scripts, espace utilisateur,
+          expérience d'achat fluide et identité visuelle immersive.
         </p>
+
+        <ul class="case-meta reveal">
+          <li><span class="k">Type</span><strong>E-commerce</strong></li>
+          <li><span class="k">Rôle</span><strong>Design &amp; Dev</strong></li>
+          <li><span class="k">Stack</span><strong>Laravel · React</strong></li>
+          <li><span class="k">Année</span><strong>2024</strong></li>
+        </ul>
       </section>
 
-      <section class="project-layout section reveal">
-        <article class="glass-card video-card">
+      <section class="case-section shell reveal">
+        <div class="video-frame">
           <iframe
             src="https://www.youtube.com/embed/UuzSGpX4s1U"
-            title="Presentation Universe Dev"
+            title="Présentation Universe Dev"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
+            loading="lazy"
           ></iframe>
-        </article>
+        </div>
+      </section>
 
-        <article class="glass-card project-points">
-          <p class="eyebrow">Points forts</p>
-          <h2>E-commerce de niche avec identite forte</h2>
-          <ul>
-            <li>Catalogue de scripts avec une navigation orientee conversion.</li>
-            <li>Architecture pensee pour evoluer avec des fonctionnalites backend.</li>
-            <li>Design immersif adapte a la communaute gaming RP.</li>
-            <li>Base technique Laravel + React pour performance et modularite.</li>
+      <section class="case-section shell reveal">
+        <div class="case-grid">
+          <div class="case-text">
+            <p class="eyebrow"><span class="dot"></span> Le projet</p>
+            <h2 class="section-title">Une <em class="grad">identité forte</em> pour une communauté exigeante.</h2>
+            <p>
+              L'univers FiveM / RedM rassemble une communauté passionnée qui
+              attend des outils à la hauteur de ses serveurs roleplay. L'objectif
+              d'Universe Dev : proposer une boutique claire, rapide et immersive,
+              où chaque script trouve sa place et son public.
+            </p>
+            <p>
+              Le design joue sur les contrastes profonds, les accents lumineux
+              et une typographie affirmée pour traduire visuellement l'esprit
+              gaming, sans sacrifier la lisibilité ni la conversion.
+            </p>
+          </div>
+
+          <ul class="case-points">
+            <li>
+              <i class="fa-solid fa-bag-shopping"></i>
+              <div>
+                <h3>Catalogue orienté conversion</h3>
+                <p>Navigation claire, filtres pertinents, fiches produits riches.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-user-shield"></i>
+              <div>
+                <h3>Espace utilisateur sécurisé</h3>
+                <p>Authentification, historique d'achats, gestion de licences.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-layer-group"></i>
+              <div>
+                <h3>Architecture modulaire</h3>
+                <p>Laravel + React pour évoluer sans dette technique.</p>
+              </div>
+            </li>
+            <li>
+              <i class="fa-solid fa-palette"></i>
+              <div>
+                <h3>Design immersif</h3>
+                <p>Identité visuelle pensée pour la communauté gaming RP.</p>
+              </div>
+            </li>
           </ul>
-        </article>
+        </div>
+      </section>
+
+      <section class="case-section shell reveal">
+        <div class="cta-card">
+          <div>
+            <p class="eyebrow"><span class="dot"></span> Et ensuite ?</p>
+            <h2 class="section-title">Un projet similaire en tête ?</h2>
+            <p class="contact-lead">Discutons-en — réponse rapide, devis honnête.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="index.html#contact">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Me contacter</span>
+            </a>
+            <a class="btn btn-ghost" href="index.html#projects">
+              <i class="fa-solid fa-arrow-left"></i>
+              <span>Autres projets</span>
+            </a>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer shell">
-      <p>© <span id="year"></span> Elias DUPIN-GILET - Tous droits reserves.</p>
+      <p>© <span id="year"></span> Elias DUPIN-GILET — Conçu &amp; codé avec <i class="fa-solid fa-heart" style="color:#ff5577"></i> à Nouméa.</p>
+      <a href="#" class="to-top" aria-label="Retour en haut"><i class="fa-solid fa-arrow-up"></i></a>
     </footer>
 
     <script src="script.js"></script>
