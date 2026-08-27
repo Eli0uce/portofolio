@@ -45,12 +45,12 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scrollbar-color: rgba(138, 92, 255, 0.6) transparent;
+  scrollbar-color: var(--accent) transparent;
 }
 
 body {
   margin: 0;
-  font-family: var(--font-body);
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: var(--text);
@@ -129,7 +129,7 @@ button { font: inherit; cursor: pointer; }
 .scroll-progress span {
   display: block;
   height: 100%;
-  width: 0%;
+  width: 0;
   background: var(--grad);
   box-shadow: 0 0 12px rgba(138, 92, 255, 0.7);
   transition: width 0.12s linear;
@@ -171,7 +171,7 @@ button { font: inherit; cursor: pointer; }
 }
 .brand {
   display: flex; align-items: center; gap: 10px;
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: -0.01em;
@@ -246,7 +246,7 @@ button { font: inherit; cursor: pointer; }
   padding: 10px;
   background: rgba(255,255,255,0.04);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
 }
 .nav-toggle span {
   display: block;
@@ -266,7 +266,7 @@ button { font: inherit; cursor: pointer; }
   align-items: center;
   gap: 10px;
   padding: 14px 22px;
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
   letter-spacing: -0.005em;
@@ -282,7 +282,7 @@ button { font: inherit; cursor: pointer; }
 .btn-primary {
   background: var(--grad);
   background-size: 200% 100%;
-  background-position: 0% 50%;
+  background-position: 0 50%;
   color: #fff;
   box-shadow: 0 14px 40px -10px rgba(138, 92, 255, 0.55);
 }
@@ -327,7 +327,7 @@ button { font: inherit; cursor: pointer; }
 .hero-tag i { color: var(--accent-2); }
 
 .hero-title {
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 600;
   font-size: clamp(2.6rem, 7vw, 5.5rem);
   line-height: 1.02;
@@ -376,7 +376,7 @@ button { font: inherit; cursor: pointer; }
 }
 .hero-meta > div { display: flex; flex-direction: column; gap: 2px; }
 .hero-meta strong {
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.02em;
@@ -434,7 +434,7 @@ button { font: inherit; cursor: pointer; }
   box-shadow: 0 0 10px var(--accent-2);
 }
 .section-title {
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 600;
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   line-height: 1.08;
@@ -496,7 +496,7 @@ button { font: inherit; cursor: pointer; }
   margin-bottom: 16px;
 }
 .card-stat h3 {
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-size: 1.25rem;
   margin: 0 0 8px;
   letter-spacing: -0.01em;
@@ -524,7 +524,7 @@ button { font: inherit; cursor: pointer; }
 .project-feature { grid-column: span 6; flex-direction: row; min-height: 380px; }
 .project-feature .project-media { flex: 1.1; }
 .project-feature .project-body { flex: 1; padding: 40px; justify-content: center; }
-.project-feature h3 { font-size: clamp(1.8rem, 3vw, 2.6rem) !important; }
+.project-feature h3 { font-size: clamp(1.8rem, 3vw, 2.6rem); }
 .project-wide { grid-column: span 6; flex-direction: row-reverse; min-height: 340px; }
 .project-wide .project-media { flex: 1; }
 .project-wide .project-body { flex: 1; padding: 40px; justify-content: center; }
@@ -573,7 +573,7 @@ button { font: inherit; cursor: pointer; }
   font-weight: 500;
 }
 .project-body h3 {
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: -0.015em;
@@ -599,7 +599,7 @@ button { font: inherit; cursor: pointer; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 500;
   font-size: 0.95rem;
   color: var(--text);
@@ -627,7 +627,7 @@ button { font: inherit; cursor: pointer; }
   align-items: center;
   gap: 10px;
   padding: 14px 26px;
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 500;
   font-size: 1.05rem;
   color: var(--text);
@@ -664,7 +664,7 @@ button { font: inherit; cursor: pointer; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 600;
   font-size: 1.15rem;
   letter-spacing: -0.01em;
@@ -739,7 +739,7 @@ button { font: inherit; cursor: pointer; }
   margin: 0 0 4px;
 }
 .timeline-item h4 {
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 600;
   font-size: 1.08rem;
   letter-spacing: -0.01em;
@@ -770,7 +770,7 @@ button { font: inherit; cursor: pointer; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: -0.01em;
@@ -791,7 +791,7 @@ button { font: inherit; cursor: pointer; }
   padding: 10px 14px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   font-size: 0.92rem;
 }
 .extra-list .level {
@@ -814,7 +814,7 @@ button { font: inherit; cursor: pointer; }
   color: var(--text-dim);
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: var(--radius);
   transition: color 0.25s, border-color 0.25s;
 }
 .chips li:hover { color: var(--text); border-color: var(--border-strong); }
@@ -903,7 +903,7 @@ button { font: inherit; cursor: pointer; }
   transform: translateX(-3px);
 }
 .case-title {
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 600;
   font-size: clamp(2.2rem, 6vw, 4.6rem);
   line-height: 1.05;
@@ -940,7 +940,7 @@ button { font: inherit; cursor: pointer; }
   color: var(--text-mute);
 }
 .case-meta strong {
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-weight: 500;
   font-size: 1rem;
   color: var(--text);
@@ -1002,11 +1002,11 @@ button { font: inherit; cursor: pointer; }
   display: inline-flex; align-items: center; justify-content: center;
   background: rgba(138,92,255,0.15);
   color: var(--accent);
-  border-radius: 12px;
+  border-radius: var(--radius-sm);
   font-size: 1.05rem;
 }
 .case-points h3 {
-  font-family: var(--font-display);
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: -0.01em;
